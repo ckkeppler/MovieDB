@@ -1,14 +1,21 @@
 <div class="container">
   <div class="p-5 bg-light rounded">
-    <h1 class="text-center">Search for any movie</h1>
-    <div class="search">
+    <h1 class="text-center">Movie DB</h1>
+    <div class="search input-group">
       <input
-        type="text"
+        type="search"
         #search
         class="form-control"
-        placeholder="search for movie"
+        placeholder="search for a movie"
+        (search)="getMovies(search.value)"
       />
-      <i class="fas fa-search" (click)="getMovies(search.value)"></i>
+      <button
+        class="btn btn-outline-secondary"
+        type="button"
+        id="button-addon2"
+      >
+        <i class="fas fa-search" (click)="getMovies(search.value)"></i>
+      </button>
     </div>
   </div>
 </div>
