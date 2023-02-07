@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Movie } from 'src/app/models/movie';
 
 @Component({
   selector: 'app-card-movie',
@@ -7,7 +7,8 @@ import { Observable } from 'rxjs';
   styleUrls: ['./card-movie.component.css'],
 })
 export class CardMovieComponent {
-  @Input('movie') movie: any;
+  @Input('movie')
+  movie!: Movie;
 
   getImage() {
     if (this.movie.Poster == 'N/A') {
