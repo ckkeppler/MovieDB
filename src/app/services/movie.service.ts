@@ -8,7 +8,7 @@ import { ResponseApi } from '../models/responseApi';
   providedIn: 'root',
 })
 export class MovieService {
-  private API_URL: string = 'http://www.omdbapi.com/?';
+  private API_URL: string = 'https://www.omdbapi.com/?';
   private API_KEY: string = '&apikey=62a1a4fe';
 
   constructor(private http: HttpClient) {}
