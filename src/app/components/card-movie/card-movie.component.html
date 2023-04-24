@@ -1,17 +1,18 @@
 <div class="movie">
   <div>
     <p>
-      {{ movie.Year }}
+      {{ movie?.Year }}
     </p>
   </div>
   <div>
-    <img src="{{ getImage() }}" [alt]="movie.Title" />
+    <img
+      src="{{ getMovieImage() }}"
+      [alt]="movie?.Title"
+      routerLink="/movies/{{ movie?.imdbID }}"
+    />
   </div>
   <div>
-    <span>{{ movie.Type }}</span>
-    <h3>{{ movie.Title }}</h3>
-    <button class="btn btn-primary" routerLink="/movies/{{ movie.imdbID }}">
-      Movie Details
-    </button>
+    <span>{{ movie?.Type }}</span>
+    <h3>{{ movie?.Title }}</h3>
   </div>
 </div>

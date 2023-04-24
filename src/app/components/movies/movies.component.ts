@@ -14,6 +14,7 @@ export class MoviesComponent implements OnInit {
   ngOnInit(): void {}
 
   getMovies(searchString: string) {
+    // calls movie service method and retrieves an array of movies to display in the template
     this.movieService.getMovies(searchString).subscribe((movie: Movie[]) => {
       console.log(movie);
       this.movies = movie;

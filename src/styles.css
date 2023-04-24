@@ -1,14 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
 
 * {
   margin: 0;
   border: 0;
-  box-sizing: border-box;
 }
 
-:root {
+html {
   --font-roboto: "Roboto Slab", serif;
   --font-raleway: "Raleway", sans-serif;
 }
@@ -18,13 +16,22 @@ body {
   background-color: #212426;
 }
 
-.empty {
-  width: 100%;
-  margin-top: 3rem;
+#background {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.2)
+    ),
+    url("./assets/movies.jpeg");
+  height: 350px;
+  width: 850px;
+}
 
+.empty {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  margin-top: 3rem;
 }
 
 .empty h2 {
@@ -34,25 +41,21 @@ body {
 }
 
 .container {
-  width: 100%;
-  margin-top: 3rem;
-
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  width: 100%;
+  margin-top: 3rem;
 }
 
 .movie {
-  width: 310px;
-  height: 460px;
+  width: 300px;
+  height: 450px;
   margin: 1.5rem;
-
   position: relative;
   border-radius: 12px;
   overflow: hidden;
-  border: none;
-
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
   box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
 }
@@ -69,6 +72,7 @@ body {
 .movie:hover {
   box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
   transform: scale(1.05, 1.05);
+  cursor: pointer;
 }
 
 .movie div:nth-of-type(2) {
@@ -85,7 +89,6 @@ body {
   z-index: 2;
   background-color: #343739;
   padding: 16px 24px 24px 24px;
-
   position: absolute;
   bottom: 0;
   right: 0;

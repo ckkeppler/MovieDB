@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { CardMovieComponent } from './card-movie.component';
 
@@ -8,9 +9,9 @@ describe('CardMovieComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CardMovieComponent ]
-    })
-    .compileComponents();
+      declarations: [CardMovieComponent],
+      imports: [RouterTestingModule],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(CardMovieComponent);
     component = fixture.componentInstance;

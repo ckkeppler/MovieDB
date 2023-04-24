@@ -10,9 +10,9 @@ export class CardMovieComponent {
   @Input('movie')
   movie!: Movie;
 
-  getImage() {
-    if (this.movie.Poster == 'N/A') {
-      return 'https://via.placeholder.com/200';
-    } else return this.movie.Poster;
+  getMovieImage() {
+    if (this.movie?.Poster == 'N/A') {
+      return 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFmAXITJdNGMff2a33B95sGQLApr9Q41rurgiqKcg&s';
+    } else return this.movie?.Poster;
   }
 }

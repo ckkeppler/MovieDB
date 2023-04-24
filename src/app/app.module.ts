@@ -15,8 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
     MoviesDetailsComponent,
     CardMovieComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
-  providers: [],
+  imports: [AppRoutingModule, BrowserModule, HttpClientModule],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Movie } from 'src/app/models/movie';
 import { MovieService } from 'src/app/services/movie.service';
@@ -20,8 +20,10 @@ export class MoviesDetailsComponent implements OnInit {
   }
 
   loadMovie() {
+    // calls movie service method and
+    // uses paramMap to get current id and return the movie object
     this.movieService
-      .getMovie(this.route.snapshot.paramMap.get('id')!)
+      .getMovieById(this.route.snapshot.paramMap.get('id')!)
       .subscribe((movie) => {
         this.movie = movie;
         console.log(this.movie);

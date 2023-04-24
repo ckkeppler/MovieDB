@@ -37,11 +37,10 @@
 </div>
 <div class="row container">
   <div class="p-5 bg-light rounded position-relative">
-    <h3>Plot</h3>
     {{ movie?.Plot }}
     <hr />
     <a href="http://imdb.com/title/{{ movie?.imdbID }}" class="btn btn-primary"
-      >View IMDB</a
+      >IMDB.com</a
     >
     <a
       [routerLink]="['/movies']"
