@@ -30,7 +30,7 @@ export class MovieService {
   }
 
   getMovieById(id: string): Observable<Movie> {
-    // uses Http Client to retrieve a single movie based on its
+    // uses Http Client to retrieve a single movie based on its imdb id
     return this.http.get<Movie>(`${this.URL}i=${id}${this.KEY}`).pipe(
       map((response) => {
         return response;
